@@ -26,6 +26,10 @@ function Provider({ children }) {
     return savedLog ? JSON.parse(savedLog) : []
   });
 
+  useEffect(() => {
+    setIsLogIn(false)
+  }, [])
+
 
   useEffect(() => {
     localStorage.setItem("isLogIn", JSON.stringify(isLogIn));
